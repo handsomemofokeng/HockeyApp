@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_goals_turn_overs"
+        android:icon="@drawable/ic_filter_1"
+        android:title="@string/turn_overs_goals" />
+
+    <item
+        android:id="@+id/navigation_circle_presentations"
+        android:icon="@drawable/ic_filter_2"
+        android:title="@string/circle_presentations" />
+
+    <item
+        android:id="@+id/navigation_penalty_corners"
+        android:icon="@drawable/ic_filter_3"
+        android:title="@string/penalty_corners" />
+
+    <item
+        android:id="@+id/navigation_goal_shots"
+        android:icon="@drawable/ic_filter_4"
+        android:title="@string/goal_shots" />
+
+</menu>

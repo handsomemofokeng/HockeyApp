@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Frag4GoalShots">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdbFirstHalfGC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="true"
+                    android:text="@string/_1st_half"
+                    android:textColor="@color/colorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/rdbSecondHalfGC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_spinner_height"
+                    android:text="@string/_2nd_half"
+                    android:textColor="@color/colorPrimary" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/circle_presentations"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_1st"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_2nd"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:text="@string/our_team"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tvHalf1TeamGoalShots"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/tvHalf2TeamGoalShots"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frmHalf1GC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/gray"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvGreenGoalShots1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvYellowGoalShots1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOrangeGoalShots1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="@dimen/text_size"/>
+
+                <TextView
+                    android:id="@+id/tvBlueGoalShots1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRedGoalShots1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frmHalf2GC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/gray"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvGreenGoalShots2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvYellowGoalShots2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOrangeGoalShots2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="@dimen/text_size"/>
+
+                <TextView
+                    android:id="@+id/tvBlueGoalShots2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRedGoalShots2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChartGoalShots"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="15dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

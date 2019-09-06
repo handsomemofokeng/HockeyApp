@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MatchLineUpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/select_match"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/spinner">
+
+            <Spinner
+                android:id="@+id/spnMatchTeam"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_spinner_height"
+                android:textAlignment="center"
+                tools:entries="@array/teams" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:text="@string/vs"
+            android:textColor="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/spinner">
+
+            <Spinner
+                android:id="@+id/spnMatchOpponent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_spinner_height"
+                android:textAlignment="center"
+                tools:entries="@array/teams" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_1_left_forward"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals1"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_2_right_forward"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals2"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_3_center_forward"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals3"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_4_left_link"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals4"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_5_right_link"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition5"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals5"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_6_center_link"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals6"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_7_left_back"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition7"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals7"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_8_right_back"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition8"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals8"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_9_left_forward"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition9"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals9"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_10_center_link"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition10"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals10"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_11_goalie"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition11"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals11"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_12_bench"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition12"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals12"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_13_bench"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition13"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals13"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_14_bench"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnPosition14"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:layout_weight="2.5"
+                        android:textAlignment="center"
+                        tools:entries="@array/teams" />
+
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/rbPlayerRating14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/prompt_goals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                        android:id="@+id/spnGoals14"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dimen_spinner_height"
+                        android:textAlignment="center"
+                        android:entries="@array/goals" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

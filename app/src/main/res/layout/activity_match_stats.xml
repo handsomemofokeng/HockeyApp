@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MatchStatsActivity">
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/title_home"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/frmFragmentsHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.5"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/tab1"
+            android:name="com.example.android.hockeyapp.Frag1GoalsTurnOvers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            tools:layout="@layout/frag1_goals_turn_overs" />
+
+        <fragment
+            android:id="@+id/tab2"
+            android:name="com.example.android.hockeyapp.Frag2CirclePenetrations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            tools:layout="@layout/frag2_circle_penetrations" />
+
+        <fragment
+            android:id="@+id/tab3"
+            android:name="com.example.android.hockeyapp.Frag3PenaltyCorners"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            tools:layout="@layout/frag3_penalty_corners" />
+
+        <fragment
+            android:id="@+id/tab4"
+            android:name="com.example.android.hockeyapp.Frag4GoalShots"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            tools:layout="@layout/frag4_goal_shots" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/stats_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/stats_navigation" />
+
+</LinearLayout>
