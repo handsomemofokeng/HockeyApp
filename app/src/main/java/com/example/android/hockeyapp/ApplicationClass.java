@@ -32,8 +32,8 @@ public class ApplicationClass extends Application {
     public static ProgressDialog progressDialog;
     //public static View toastView;
 
-    public static final String APPLICATION_ID = "YOUR_APP_ID";
-    public static final String API_KEY = "YOUR_API_KEY";
+    public static final String APPLICATION_ID = "2C939002-45FF-A107-FF75-1B9283447400";
+    public static final String API_KEY = "4B43B005-7016-2AEF-FFB7-043E21BF7700";
     public static final String SERVER_URL = "https://api.backendless.com",
             MY_SHARED_PREFERENCES_NAME = "com.example.android.hockeyapp.HockeyApp",
             SELECTED_PLAYER = "selectedPlayer";
